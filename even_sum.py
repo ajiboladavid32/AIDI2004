@@ -1,11 +1,14 @@
- # This program calculates the sum of all even numbers between 1 and a user-defined limit.
+def sum_of_even_numbers(limit):
+    sum = 0
+    for number in range(2, limit + 1, 2):
+        sum += number
+    return sum
 
+# Getting user input for the limit
 limit = int(input("Enter the limit: "))
-sum_of_evens = 0
 
-for num in range(1, limit + 1):
-    if num % 2 == 0:
-        sum_of_evens += num
+# Calculating and printing the sum of even numbers
+result = sum_of_even_numbers(limit)
+print("The sum of even numbers between 1 and", limit, "is:", result)
 
-print("The sum of even numbers from 1 to", limit, "is:", sum_of_evens)
 
